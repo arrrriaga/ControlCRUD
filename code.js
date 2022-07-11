@@ -36,24 +36,26 @@ const mostrarRegistros = () => {
             <td>${registroLocal.nombre}</td>
             <td>${registroLocal.apellido}</td>
             <td>${registroLocal.edad}</td>
-            <td>
-                <button 
-                    type="button" 
-                    class="btn btn-warning"
-                    onclick="iniciarEditarRegistro('${registroLocal.id}'), editareliminarRegistro('${registroLocal.id}')"
-                >
-                        Editar
-                </button>
-            </td>
-            <td>
-                <button 
-                    type="button" 
-                    class="btn btn-danger" 
-                    onclick="eliminarRegistro('${registroLocal.id}')" 
-                >
-                        Eliminar 
-                </button>
-            </td>
+            <div class="container">
+                <td class="row">
+                    <button 
+                        type="button" 
+                        class="btn btn-warning"
+                        onclick="iniciarEditarRegistro('${registroLocal.id}'), editareliminarRegistro('${registroLocal.id}')"
+                    >
+                            Editar
+                    </button>
+                </td>
+                <td class="row">
+                    <button 
+                        type="button" 
+                        class="btn btn-danger" 
+                        onclick="eliminarRegistro('${registroLocal.id}')" 
+                    >
+                            Eliminar 
+                    </button>
+                </td>
+            </div>
         </tr>
         `;
         cuerpoTabla.innerHTML += fila;
