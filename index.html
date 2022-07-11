@@ -35,30 +35,40 @@
             />
           </div>
           <div class="mb-3">
-            <label for="txtNombre" class="form-label">Nombre</label>
-            <input
+            <label for="txtMesa" class="form-label">Número de mesa</label>
+            <select
               type="text"
-              class="form-control"
-              id="txtNombre"
+              class="form-select"
+              id="txtMesa"
               aria-describedby="emailHelp"
               autocomplete="off"
-            />
+            >
+            <option selected>Selecciona la mesa a generar la órden</option>
+            <option value="1">Mesa 1</option>
+            <option value="2">Mesa 2</option>
+            <option value="3">Mesa 3</option>
+            <option value="4">Mesa 4</option>
+            <option value="5">Mesa 5</option>
+            <option value="6">Mesa 6</option>
+            <option value="7">Mesa 7</option>
+            <option value="8">Mesa 8</option>
+          </select>
           </div>
           <div class="mb-3">
-            <label for="txtApellido" class="form-label">Apellido</label>
+            <label for="txtPlatillo" class="form-label">Platillos</label>
             <input
               type="text"
               class="form-control"
-              id="txtApellido"
+              id="txtPlatillo"
               autocomplete="off"
             />
           </div>
           <div class="mb-3">
-            <label for="txtEdad" class="form-label">Edad</label>
+            <label for="txtPersonas" class="form-label">Personas por mesa</label>
             <input
               type="text"
               class="form-control"
-              id="txtEdad"
+              id="txtPersonas"
               autocomplete="off"
             />
           </div>
@@ -92,11 +102,11 @@
       <article class="col">
         <table class="table">
           <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Apellido</th>
-              <th scope="col">Edad</th>
+            <tr id="headerTabla">
+             
+              <th scope="col">Número de mesa</th>
+              <th scope="col">Platillos</th>
+              <th scope="col">Personas por mesa</th>
               <th scope="col">Editar</th>
               <th scope="col">Eliminar</th>
             </tr>

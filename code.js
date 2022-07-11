@@ -1,17 +1,17 @@
 let registros = [];
 
 const txtID = document.getElementById("txtID");
-const txtNombre = document.getElementById("txtNombre");
-const txtApellido = document.getElementById("txtApellido");
-const txtEdad = document.getElementById("txtEdad");
+const txtMesa = document.getElementById("txtMesa");
+const txtPlatillo = document.getElementById("txtPlatillo");
+const txtPersonas = document.getElementById("txtPersonas");
 const cuerpoTabla = document.getElementById("cuerpoTabla");
 
 const crearRegistro = () => {
     const usuario = {
         id: uuidv4(),
-        nombre: txtNombre.value,
-        apellido: txtApellido.value,
-        edad: txtEdad.value
+        nombre: txtMesa.value,
+        apellido: txtPlatillo.value,
+        edad: txtPersonas.value
     }
     registros = JSON.parse(localStorage.getItem("usuarios")) || [];
     registros.push(usuario);
@@ -29,7 +29,7 @@ const mostrarRegistros = () => {
         const fila =
             `
         <tr>
-            <th scope="row">1</th>
+           
             <td>${registroLocal.nombre}</td>
             <td>${registroLocal.apellido}</td>
             <td>${registroLocal.edad}</td>
@@ -67,9 +67,9 @@ const iniciarEditarRegistro = (idRegistro) => {
 
 
     txtID.value = usuario.id;
-    txtNombre.value = usuario.nombre;
-    txtApellido.value = usuario.apellido;
-    txtEdad.value = usuario.edad;
+    txtMesa.value = usuario.nombre;
+    txtPlatillo.value = usuario.apellido;
+    txtPersonas.value = usuario.edad;
 
 }
 const editarRegistro = () => {
@@ -78,9 +78,9 @@ const editarRegistro = () => {
         return registroLocal.id === txtID.value;
     })
 
-    usuario.nombre = txtNombre.value;
-    usuario.apellido = txtApellido.value;
-    usuario.edad = txtEdad.value;
+    usuario.nombre = txtMesa.value;
+    usuario.apellido = txtPlatillo.value;
+    usuario.edad = txtPersonas.value;
 
     localStorage.setItem("usuarios", JSON.stringify(registrosLocales));
 

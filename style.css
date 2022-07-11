@@ -8,3 +8,6 @@
     width: 250px;
 }
 
+#headerTabla, #cuerpoTabla {
+    text-align: center;
+}
