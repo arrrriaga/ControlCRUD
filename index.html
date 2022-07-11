@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crud APPs</title>
+    <title>Control de mesas</title>
     <link
       rel="stylesheet"
       href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -34,6 +34,7 @@
               readonly
             />
           </div>
+          
           <div class="mb-3">
             <label for="txtMesa" class="form-label">Número de mesa</label>
             <select
@@ -55,7 +56,8 @@
           </select>
           </div>
           <div class="mb-3">
-            <label for="txtPlatillo" class="form-label">Platillos</label>
+            <label for="txtPlatillo" class="form-label row">Platillos</label>
+            
             <input
               type="text"
               class="form-control"
@@ -73,13 +75,7 @@
             />
           </div>
           <div class="d-flex justify-content-end">
-            <button
-            type="button"
-            class="btn btn-warning"
-            onclick="editarRegistro()"
-          >
-            Editar Registro
-          </button>
+            
             <button
               type="button"
               class="btn btn-primary"
@@ -116,7 +112,9 @@
         </table>
       </article>
     </section>
-
+    <footer>
+      
+    </footer>
     <script src="./code.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
   </body>

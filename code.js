@@ -6,18 +6,21 @@ const txtPlatillo = document.getElementById("txtPlatillo");
 const txtPersonas = document.getElementById("txtPersonas");
 const cuerpoTabla = document.getElementById("cuerpoTabla");
 
-const crearRegistro = () => {
+
+
+function crearRegistro() {
     const usuario = {
         id: uuidv4(),
         nombre: txtMesa.value,
         apellido: txtPlatillo.value,
         edad: txtPersonas.value
-    }
+    };
     registros = JSON.parse(localStorage.getItem("usuarios")) || [];
     registros.push(usuario);
     localStorage.setItem("usuarios", JSON.stringify(registros));
 
     mostrarRegistros();
+
 }
 
 
@@ -37,7 +40,7 @@ const mostrarRegistros = () => {
                 <button 
                     type="button" 
                     class="btn btn-warning"
-                    onclick="iniciarEditarRegistro('${registroLocal.id}')"
+                    onclick="iniciarEditarRegistro('${registroLocal.id}'), editareliminarRegistro('${registroLocal.id}')"
                 >
                         Editar
                 </button>
@@ -71,6 +74,8 @@ const iniciarEditarRegistro = (idRegistro) => {
     txtPlatillo.value = usuario.apellido;
     txtPersonas.value = usuario.edad;
 
+
+
 }
 const editarRegistro = () => {
     const registrosLocales = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -84,6 +89,7 @@ const editarRegistro = () => {
 
     localStorage.setItem("usuarios", JSON.stringify(registrosLocales));
 
+
     mostrarRegistros();
 
 }
@@ -95,6 +101,15 @@ const eliminarRegistro = (idRegistro) => {
     })
     localStorage.setItem("usuarios", JSON.stringify(registrosFiltrados));
     mostrarRegistros();
+}
+
+const editareliminarRegistro = (idRegistro) => {
+    const registrosLocales = JSON.parse(localStorage.getItem("usuarios")) || [];
+    const registrosFiltrados = registrosLocales.filter((registroLocal) => {
+        return registroLocal.id != idRegistro;
+    })
+    localStorage.setItem("usuarios", JSON.stringify(registrosFiltrados));
+
 }
 
 

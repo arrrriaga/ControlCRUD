@@ -11,3 +11,8 @@
 #headerTabla, #cuerpoTabla {
     text-align: center;
 }
+
+.checkContainer {
+    margin: 0px 50px;
+    margin-bottom: 20px;
+}
