@@ -40,7 +40,8 @@ const mostrarRegistros = () => {
                 <td class="row">
                     <button 
                         type="button" 
-                        class="btn btn-warning"
+                        style="background-color: #e9ecef"
+                        class="btn"
                         onclick="iniciarEditarRegistro('${registroLocal.id}'), editareliminarRegistro('${registroLocal.id}')"
                     >
                             Editar
@@ -49,7 +50,8 @@ const mostrarRegistros = () => {
                 <td class="row">
                     <button 
                         type="button" 
-                        class="btn btn-danger" 
+                        class="btn"
+                        style="background-color: #000; color: #e9ecef" 
                         onclick="eliminarRegistro('${registroLocal.id}')" 
                     >
                             Eliminar 

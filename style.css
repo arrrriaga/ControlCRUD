@@ -13,8 +13,23 @@
     text-align: center;
 }
 
-.checkContainer {
-    margin: 0px 50px;
-    margin-bottom: 20px;
+
+#footer {
+    background-color: #000;
+    color: #e9ecef;
+    text-align: center;
+    position:relative;
+
+    width: 100%;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #e9ecef;
+
+}
+
+.container {
+    margin: auto;
 }
 
